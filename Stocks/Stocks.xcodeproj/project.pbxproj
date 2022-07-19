@@ -10,6 +10,13 @@
 		4C08629A287C893400238693 /* RequestDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C086299287C893400238693 /* RequestDataProvider.swift */; };
 		4C08629C287C8AB800238693 /* CompanyMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08629B287C8AB800238693 /* CompanyMapper.swift */; };
 		4C08629E287C8BA200238693 /* AlertExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08629D287C8BA200238693 /* AlertExtention.swift */; };
+		4C0862A02885ED5500238693 /* StockInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08629F2885ED5500238693 /* StockInformation.swift */; };
+		4C0862A22885F63700238693 /* SetInfoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0862A12885F63700238693 /* SetInfoDelegate.swift */; };
+		4C0862A42886046A00238693 /* CompanyInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0862A32886046A00238693 /* CompanyInformation.swift */; };
+		4C0862A628860AFD00238693 /* CompanyImageUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0862A528860AFD00238693 /* CompanyImageUrl.swift */; };
+		4C0862A828862D7400238693 /* PickerViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0862A728862D7400238693 /* PickerViewDataSource.swift */; };
+		4C0862AA2886AF1D00238693 /* PickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0862A92886AF1D00238693 /* PickerViewDelegate.swift */; };
+		4C0862AC2886B40000238693 /* PickerViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0862AB2886B40000238693 /* PickerViewData.swift */; };
 		4C48F30227B8F6F60008BDC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C48F30127B8F6F60008BDC2 /* AppDelegate.swift */; };
 		4C48F30427B8F6F60008BDC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C48F30327B8F6F60008BDC2 /* SceneDelegate.swift */; };
 		4C48F30627B8F6F60008BDC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C48F30527B8F6F60008BDC2 /* ViewController.swift */; };
@@ -22,6 +29,13 @@
 		4C086299287C893400238693 /* RequestDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDataProvider.swift; sourceTree = "<group>"; };
 		4C08629B287C8AB800238693 /* CompanyMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyMapper.swift; sourceTree = "<group>"; };
 		4C08629D287C8BA200238693 /* AlertExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtention.swift; sourceTree = "<group>"; };
+		4C08629F2885ED5500238693 /* StockInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockInformation.swift; sourceTree = "<group>"; };
+		4C0862A12885F63700238693 /* SetInfoDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetInfoDelegate.swift; sourceTree = "<group>"; };
+		4C0862A32886046A00238693 /* CompanyInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInformation.swift; sourceTree = "<group>"; };
+		4C0862A528860AFD00238693 /* CompanyImageUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyImageUrl.swift; sourceTree = "<group>"; };
+		4C0862A728862D7400238693 /* PickerViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewDataSource.swift; sourceTree = "<group>"; };
+		4C0862A92886AF1D00238693 /* PickerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewDelegate.swift; sourceTree = "<group>"; };
+		4C0862AB2886B40000238693 /* PickerViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewData.swift; sourceTree = "<group>"; };
 		4C48F2FE27B8F6F60008BDC2 /* Stocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C48F30127B8F6F60008BDC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C48F30327B8F6F60008BDC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +76,8 @@
 		4C48F30027B8F6F60008BDC2 /* Stocks */ = {
 			isa = PBXGroup;
 			children = (
+				4C0862A728862D7400238693 /* PickerViewDataSource.swift */,
+				4C0862A12885F63700238693 /* SetInfoDelegate.swift */,
 				4C48F30127B8F6F60008BDC2 /* AppDelegate.swift */,
 				4C48F30327B8F6F60008BDC2 /* SceneDelegate.swift */,
 				4C48F30527B8F6F60008BDC2 /* ViewController.swift */,
@@ -72,6 +88,11 @@
 				4C086299287C893400238693 /* RequestDataProvider.swift */,
 				4C08629B287C8AB800238693 /* CompanyMapper.swift */,
 				4C08629D287C8BA200238693 /* AlertExtention.swift */,
+				4C08629F2885ED5500238693 /* StockInformation.swift */,
+				4C0862A32886046A00238693 /* CompanyInformation.swift */,
+				4C0862A528860AFD00238693 /* CompanyImageUrl.swift */,
+				4C0862A92886AF1D00238693 /* PickerViewDelegate.swift */,
+				4C0862AB2886B40000238693 /* PickerViewData.swift */,
 			);
 			path = Stocks;
 			sourceTree = "<group>";
@@ -148,11 +169,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C48F30627B8F6F60008BDC2 /* ViewController.swift in Sources */,
+				4C0862A22885F63700238693 /* SetInfoDelegate.swift in Sources */,
 				4C08629E287C8BA200238693 /* AlertExtention.swift in Sources */,
 				4C48F30227B8F6F60008BDC2 /* AppDelegate.swift in Sources */,
 				4C08629A287C893400238693 /* RequestDataProvider.swift in Sources */,
+				4C0862A42886046A00238693 /* CompanyInformation.swift in Sources */,
 				4C48F30427B8F6F60008BDC2 /* SceneDelegate.swift in Sources */,
+				4C0862AC2886B40000238693 /* PickerViewData.swift in Sources */,
 				4C08629C287C8AB800238693 /* CompanyMapper.swift in Sources */,
+				4C0862A02885ED5500238693 /* StockInformation.swift in Sources */,
+				4C0862A828862D7400238693 /* PickerViewDataSource.swift in Sources */,
+				4C0862A628860AFD00238693 /* CompanyImageUrl.swift in Sources */,
+				4C0862AA2886AF1D00238693 /* PickerViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

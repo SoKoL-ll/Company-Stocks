@@ -15,4 +15,10 @@ extension UIAlertController {
         alert.addAction(UIAlertAction(title: "Enter", style: .cancel, handler: nil))
         controller?.present(alert, animated: true)
     }
+    
+    static func jsonAlert(from controller: UIViewController?, message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Enter", style: .cancel, handler: nil))
+        controller?.present(alert, animated: true)
+    }
 }

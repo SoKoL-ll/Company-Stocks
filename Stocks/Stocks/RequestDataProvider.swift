@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 class RequestDataProvider {
     
-    weak var delegate: ViewController?
+    weak var delegate: SetInfoDelegate?
     var mapper: CompanyMapper?
     
     func requestCompanies() {
@@ -79,8 +79,7 @@ class RequestDataProvider {
             }
             
             DispatchQueue.main.async {
-                self?.delegate?.companyImage.image = UIImage(data: data)
-                self?.delegate?.companyImage.isHidden = false
+                self?.delegate?.setImage(data: data)
             }
         }
         

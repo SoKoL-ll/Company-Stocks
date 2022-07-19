@@ -6,87 +6,49 @@
 //
 
 import Foundation
+import UIKit
+
 class CompanyMapper {
     
-    weak var delegate: ViewController?
     weak var request: RequestDataProvider?
+    weak var delegate: SetInfoDelegate?
     
     func parseQuote(data: Data) {
-        do {
-            let jsonObject = try JSONSerialization.jsonObject(with: data)
-            
-            guard
-                let json = jsonObject as? [String: Any],
-                let companyName = json["companyName"] as? String,
-                let companySymbol = json["symbol"] as? String,
-                let price = json["latestPrice"] as? Double,
-                let priceChange = json["change"] as? Double
-            else {
-                print("Invalid JSON format")
-                return
-            }
-            
+        guard let companyInfoObject = try? JSONDecoder().decode(StockInformation.self, from: data) else {
             DispatchQueue.main.async {
-                self.delegate?.displayStockInfo(companyName: companyName,
-                                                symbol: companySymbol,
-                                                price: price,
-                                                priceChange: priceChange)
+                UIAlertController.jsonAlert(from: self.delegate, message: "Unable to get company details")
             }
             
-        } catch {
-            print(" JSON parsing error: " + error.localizedDescription)
+            return
+        }
+        
+        DispatchQueue.main.async {
+            self.delegate?.displayStockInfo(companyInfo: companyInfoObject)
         }
     }
     
     func getURLImage(data: Data) {
-        do {
-            let jsonObject = try JSONSerialization.jsonObject(with: data)
-            
-            guard
-                let json = jsonObject as? [String: Any],
-                let url = json["url"] as? String
-            else {
-                print("Invalid JSON format")
-                return
+        guard let imageUrl = try? JSONDecoder().decode(CompanyImageUrl.self, from: data) else {
+            DispatchQueue.main.async {
+                UIAlertController.jsonAlert(from: self.delegate, message: "Unable to load company logo.")
             }
             
-            self.request?.downloadImage(url: url)
-        } catch {
-            print(" JSON parsing error: " + error.localizedDescription)
+            return
         }
+        
+        self.request?.downloadImage(url: imageUrl.url)
     }
     
     func parseCompanies(data: Data) {
-        var newCompanies: [(String, String)] = []
-        
-        do {
-            let jsonObject = try JSONSerialization.jsonObject(with: data)
-            
-            guard
-                let json = jsonObject as? [[String: Any]]
-            else {
-                print("Invalid JSON format")
-                return
+        guard let companies = try? JSONDecoder().decode([CompanyInformation].self, from: data) else {
+            DispatchQueue.main.async {
+                UIAlertController.jsonAlert(from: self.delegate, message: "Unable to get list of companies. Only five main companies are available.")
             }
             
-            json.forEach {
-                guard
-                    let company = $0["companyName"] as? String,
-                    let symbol = $0["symbol"] as? String
-                    
-                else {
-                    print("Invalid JSON format")
-                    return
-                }
-                
-                newCompanies.append((company, symbol))
-            }
-            
-        } catch {
-            print(" JSON parsing error: " + error.localizedDescription)
+            return
         }
         
-        self.delegate?.setNewCompanies(newCompanies: newCompanies)
+        self.delegate?.setNewCompanies(newCompanies: companies)
     }
     
 }
